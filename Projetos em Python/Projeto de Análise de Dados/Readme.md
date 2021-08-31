@@ -149,9 +149,9 @@ print("Total da Folha Salarial mensal {:,}".format(funcionarios_df['Custo Total 
 ```
 
 <h2> 2ª Pergunta: Qual o valor de Faturamento da empresa?</h2>
-<p>
+<h3>
 Primeiramente eu verifiquei se o tempo de contrato e o valor de contrato estavam com o mesmo tipo, ou seja, número.
-</p>
+</h3>
 <h3> Tabela Clientes</h3>
 
 ``` bash
@@ -189,8 +189,8 @@ memory usage: 7.5+ KB
 <img src = "https://user-images.githubusercontent.com/79184789/131443153-e071e80f-1573-42bc-a1cc-6bd8308f16b9.jpg" width = 300px>
 </div>
 
-<p> Show de Bola! Agora eu posso seguir. Depois eu fiz o uso do ID Cliente, da tabela serviços, para saber quantas vezes um mesmo cliente fechou um contrato. Utilizando a função value_counts.
-</p>
+<h3> Show de Bola! Agora eu posso seguir. Depois eu fiz o uso do ID Cliente, da tabela serviços, para saber quantas vezes um mesmo cliente fechou um contrato. Utilizando a função value_counts.
+</h3>
 
 ``` bash
 servicos_df['ID Cliente'].value_counts()
@@ -212,9 +212,9 @@ Name: ID Cliente, Length: 236, dtype: int64
 <img src = "https://user-images.githubusercontent.com/79184789/131443775-1219f79a-5eb5-4a00-b827-0723cba16ee3.gif" width = 300px >
 </div>
 
-<p>
+<h3>
 Show, agora eu posso fazer a mescla entre as tabelas clientes e serviços para eu poder criar uma nova tabela chamada Faturamento. E nela eu vou poder fazer os cálculos de forma mais fácil. Multiplicando apenas a coluna <a <strong>Tempo Total de Contrato</strong> </a> com a coluna <a <strong>Valor Contrato Mensal.</strong></a> E o final de tudo isso iremos obter o valor de faturamento de R$ 5.519.160,00
-</p>
+</h3>
 
 ``` bash
 faturamentos_df = servicos_df[['ID Cliente', 'Tempo Total de Contrato (Meses)']].merge(clientes_df[['ID Cliente','Valor Contrato Mensal']], on = "ID Cliente")
@@ -231,7 +231,7 @@ print("O faturamento total e R$ {:,} ". format(faturamentos_df['Faturamento Tota
 </div>
 <br>
 <h2> 3ª Pergunta: Qual a % de funcionários que já fechou algum contrato</h2>
-<p>Bom, para responder a essa pergunta eu utilizei novamente a função value_counts para saber quantos funcionários fecharam mais de 1 contrato. e o resultado do TOP 5 funcionários, dividos pelo seu ID, foi:</p>
+<h3>Bom, para responder a essa pergunta eu utilizei novamente a função value_counts para saber quantos funcionários fecharam mais de 1 contrato. e o resultado do TOP 5 funcionários, dividos pelo seu ID, foi:</h3>
 
 ``` bash
 funcionariosQueFecharamContratos = servicos_df['ID Funcionário'].value_counts()
@@ -241,8 +241,8 @@ funcionariosQueFecharamContratos[:5].plot(kind = 'bar', figsize = (15,5))
 <div align = "center">
 <img src = "https://user-images.githubusercontent.com/79184789/131440560-86250b0f-2b58-4d07-956a-c507b6feed62.png" >
 </div>
-<p> Beleza! Já armazenei a coluna gerada com a quantidade de contratos fechads por cada funcionário. Agora, para saber quantos % dos funcionários fecham contratos, então basta dividirmos a quantidade de funcionários que fecharam algum contrato com a quantidade total de funcionários na empresa. O que resultou em uma porcentagem de 86,8%
-</p>
+<h3> Beleza! Já armazenei a coluna gerada com a quantidade de contratos fechads por cada funcionário. Agora, para saber quantos % dos funcionários fecham contratos, então basta dividirmos a quantidade de funcionários que fecharam algum contrato com a quantidade total de funcionários na empresa. O que resultou em uma porcentagem de 86,8%
+</3>
 
 ``` bash
 totalFechado = len(funcionariosQueFecharamContratos)
@@ -253,9 +253,9 @@ O percentual de funcionários que já fecharam algum contrato foi de 86,8%
 ```
 
 <h2>4ª Pergunta: Quantidade de contratos fechados por cada área da empresa? </h2>
-<p>
+<h3>
 Certo, para conseguir analisar a relação de funcionários por área eu fiz uma nova mescla entre as tabelas <a style = "color: blue;"> Serviços e Funcionários.</a> E a partir disso gerar uma nova tabela que chamei de Contrato Área. Assim, ficou mais fácil saber quantos contratos for fechados por cada área da empresa. Utilizando novamente a função value_counts, foi possível criar um gráfico de barras para mostrar de forma melhor quantos contratos cada área fechou. Olha só
-</p>
+</h3>
 
 ``` bash
 contratoAreadf = servicos_df[['ID Funcionário']].merge(funcionarios_df[['ID Funcionário', 'Area']], on = 'ID Funcionário')
@@ -278,13 +278,13 @@ Logística         40
 ```
 <h2>Gráfico de Barras Quantidade de Contratos Fechados x Área</h2>
 <div align = "left-center">
-<img src = "https://user-images.githubusercontent.com/79184789/131440558-6198330d-165e-44e5-a63a-39ff845446ed.png">
+<img src = "https://user-images.githubusercontent.com/79184789/131440558-6198330d-165e-44e5-a63a-39ff845446ed.png" width = 500px>
 </div>
 
 <h2>5ª Pergunta: Quantos Funcionários eu possuo em cada área? </h2>
-<p>
+<h3>
 Essa pergunta é mais simples de se responder. Basta eu pegar a Tabela de funcionários e utilizar novamente a função value_counts para saber quantas vezes cada área aparece dentro da Coluna Área e no final fazer um gráfico bacana para a gente poder visualizar melhor 😎.
-</p>
+</h3>
 
 ``` bash
 contratoPorArea = funcionarios_df['Area'].value_counts()
@@ -307,9 +307,9 @@ Financeiro        18
 </div>
 
 <h2>Qual o ticket-médio mensal do valor dos contratos?</h2>
-<p>
+<h3>
 Essa é Fácil. Basta a gente pegar aquela tabela de Faturamento que criamos anteriormente e fazer a soma de todos os valores da coluna Valor Contrato Mensal 👍. O valor ficou R$ 2.438,35
-</p>
+</h3>
 
 ``` bash
 ticketMedio = faturamentos_df['Valor Contrato Mensal'].mean()
