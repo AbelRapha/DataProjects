@@ -322,4 +322,4 @@ O ticket medio mensal dos contratos e de R$ 2,438.35
 </div>
 
 ## Autor
-<h4 align = "center"> Criado por mim 💗. <a href = "https://www.linkedin.com/in/abel-rapha-280a0a216/">Linkedin</a>. <p>E <a href = "htttp://hashtagtreinamentos.com"> dados</a> do curso da Hashtag Treinamentos.</p>
+<h4 align = "center"> Criado por mim 💗. <a href = "https://www.linkedin.com/in/abel-rapha-280a0a216/">Linkedin</a>. <p>E dados do curso da  <a href ="htttps://www.hashtagtreinamentos.com">Hashtag Treinamentos.<a/></p>
