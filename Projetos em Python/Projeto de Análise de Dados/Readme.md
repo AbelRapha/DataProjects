@@ -50,7 +50,7 @@ O que queremos saber/fazer?<br>
     <a href = "https://github.com/AbelRapha/DataProjects/tree/main/Projetos%20em%20Python/Projeto%20de%20An%C3%A1lise%20de%20Dados"> Link do repositório</a>
 
 ## Storytelling
-<h3>O que fiz primeiramente foi realizar a limpeza dos dados. Retirando as colunas que não eram relevantes para a minha análise, tais como a coluna estado civil e cargo. E no final ficou apenas essas colunas abaixo</h3><br>
+<h3>O que fiz primeiramente foi realizar a limpeza dos dados. Retirando as colunas que não eram relevantes para a minha análise, tais como a coluna estado civil e cargo da Tabela Funcionários. E no final ficou apenas essas colunas abaixo</h3><br>
 
 ``` bash
 
@@ -61,12 +61,15 @@ funcionarios_df.head()
 
 ``` 
 
-<h2>    
-    
-</h2><br>
+<div align = "center">
+<img src = "https://user-images.githubusercontent.com/79184789/131440246-ae85535e-277f-4140-a9d6-7376cdea02ca.png">
+</div>
+
+
 <h3>
 Visualizando os dados. E no caso da tabela de Serviços foi retirado a coluna Código de Serviço.
 </h3><br>
+
 <h2> Tabela Clientes</h2>
 
 ``` bash
@@ -91,7 +94,7 @@ servicos_df.head()
 
 <h3> Dados limpos e organizados. Agora eu fui para a parte de responder as perguntas. Primeiramente qual o custo da folha salarial? No caso o custo da Folha de cada funcionário seria basicamente a soma do Salário, Impostos, Benefícios, Vale Refeição e Vale Transporte.</h3>
 <p>
-    <h3> Porém, tive um pequeno problema com o arranjo dos dados pois eles não estavam no mesmo tipo, ou seja, algumas colunas não estavam sendo consideradas como números, mas sim como palavras. E não dá para a ente fazer contas com palavras, né? Pelo menos eu acho que não dá hahahaha.
+    <h3> Porém, tive um pequeno problema com o arranjo dos dados pois eles não estavam no mesmo tipo, ou seja, algumas colunas não estavam sendo consideradas como números, mas sim como palavras. E não dá para a gente fazer contas com palavras, né? Pelo menos eu acho que não dá hahahaha.
     </h3>
 <div align = "center">
 <img src = "https://user-images.githubusercontent.com/79184789/131441282-7233062b-ce42-42bb-b79b-46d5b3f97eb6.gif">
