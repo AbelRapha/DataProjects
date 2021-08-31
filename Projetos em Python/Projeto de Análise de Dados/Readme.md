@@ -12,11 +12,15 @@
 <div align = "center">
 <img src ="https://user-images.githubusercontent.com/79184789/131441542-c3dc4b7f-c083-4938-ac47-7d80dee5ecda.gif">
 </div>
+<br>
+<br>
+<br>
+<br>
 
 ## Sobre o Projeto
-<p>Roi, tudo bom? Você vem sempre aqui? hahaha.</p>
+<p>Roi, tudo bom? Você vem sempre aqui? hahah.</p>
 <div align = "center">
-<img src = "https://user-images.githubusercontent.com/79184789/131442139-bd9769b7-0193-45a0-8788-1372ccb729ad.gif">
+<img src =" https://user-images.githubusercontent.com/79184789/131442139-bd9769b7-0193-45a0-8788-1372ccb729ad.gif">
 </div>
 <br>
 <p> Brincadeiras a parte, esta é uma breve descrição deste projeto.<br>
@@ -245,4 +249,74 @@ print("O percentual de funcionarios que ja fechou algum contrato foi de {:.1%}".
 O percentual de funcionários que já fecharam algum contrato foi de 86,8%
 ```
 
-<h2>4ª Pergunta: Quantidade de contrato fechados por cada área da empresa? </h2>
+<h2>4ª Pergunta: Quantidade de contratos fechados por cada área da empresa? </h2>
+<p>
+Certo, para conseguir analisar a relação de funcionários por área eu fiz uma nova mescla entre as tabelas <a style = "color: blue;"> Serviços e Funcionários.</a> E a partir disso gerar uma nova tabela que chamei de Contrato Área. Assim, ficou mais fácil saber quantos contratos for fechados por cada área da empresa. Utilizando novamente a função value_counts, foi possível criar um gráfico de barras para mostrar de forma melhor quantos contratos cada área fechou. Olha só
+</p>
+
+``` bash
+contratoAreadf = servicos_df[['ID Funcionário']].merge(funcionarios_df[['ID Funcionário', 'Area']], on = 'ID Funcionário')
+contratoAreadf
+```
+<h2>Tabela Contrato Área</h2>
+<div align = "left-center">
+<img src = "https://user-images.githubusercontent.com/79184789/131440559-62ed5173-192d-4c99-b7cf-0b4ab10de484.png">
+</div>
+
+``` bash
+contratosAreaQuantidade = contratoAreadf['Area'].value_counts()
+display(contratosAreaQuantidade)
+contratosAreaQuantidade.plot(kind = "bar")
+Administrativo    63
+Operações         48
+Comercial         44
+Financeiro        42
+Logística         40
+```
+<h2>Gráfico de Barras Quantidade de Contratos Fechados x Área</h2>
+<div align = "left-center">
+<img src = "https://user-images.githubusercontent.com/79184789/131440558-6198330d-165e-44e5-a63a-39ff845446ed.png">
+</div>
+
+<h2>5ª Pergunta: Quantos Funcionários eu possuo em cada área? </h2>
+<p>
+Essa pergunta é mais simples de se responder. Basta eu pegar a Tabela de funcionários e utilizar novamente a função value_counts para saber quantas vezes cada área aparece dentro da Coluna Área e no final fazer um gráfico bacana para a gente poder visualizar melhor 😎.
+</p>
+
+``` bash
+contratoPorArea = funcionarios_df['Area'].value_counts()
+display(contratoPorArea)
+contratoPorArea.plot(kind = "bar", figsize = (10,5))
+Comercial         26
+Administrativo    26
+Operações         23
+Logística         21
+Financeiro        18
+```
+<h2>Gráfico de Barras Funcionários x Área</h2>
+<div align = "left-center">
+<img src = "https://user-images.githubusercontent.com/79184789/131440557-2b5699d6-3c81-451a-8d51-88ac49705339.png">
+</div>
+
+<div align = "center">
+<h3> E agora indo para a nossa última pergunta</h3>
+<img src = "https://user-images.githubusercontent.com/79184789/131529147-04d7a5f5-a276-4d40-adaa-7f41df02d869.gif">
+</div>
+
+<h2>Qual o ticket-médio mensal do valor dos contratos?</h2>
+<p>
+Essa é Fácil. Basta a gente pegar aquela tabela de Faturamento que criamos anteriormente e fazer a soma de todos os valores da coluna Valor Contrato Mensal 👍. O valor ficou R$ 2.438,35
+</p>
+
+``` bash
+ticketMedio = faturamentos_df['Valor Contrato Mensal'].mean()
+print("O ticket medio mensal dos contratos e de R$ {:,.2f}".format(ticketMedio))
+O ticket medio mensal dos contratos e de R$ 2,438.35
+```
+<div align = "center">
+<h3> E agora acabou. Mas, não fique triste. Tenho muito mais projetos. Espero que tenha gostado do que viu.</h3>
+<img src = "https://user-images.githubusercontent.com/79184789/131530640-a1a01f65-d468-40b3-b2f8-fdde8a7e86d0.gif">
+</div>
+
+## Autor
+<h4 align = "center"> Criado por mim 💗. <a href = "https://www.linkedin.com/in/abel-rapha-280a0a216/">Linkedin</a>. <p>E <a href = "htttp://hashtagtreinamentos.com"> dados</a> do curso da Hashtag Treinamentos.</p>
