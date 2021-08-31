@@ -58,6 +58,11 @@ Visualizando os dados. E no caso da tabela de Serviços foi retirado a coluna C�
 ``` bash
 TabelaClientes.head()
 ```
+<div align = "center">
+<img src = "https://user-images.githubusercontent.com/79184789/131439821-675b8042-4646-4e1f-b90f-1a6d4486a761.png"
+</div>     
+    
+
 <h2>
     Tabela Serviços
 </h2>
