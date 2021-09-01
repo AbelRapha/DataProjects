@@ -20,7 +20,7 @@
 ## Sobre o Projeto
 <p>Roi, tudo bom? Você vem sempre aqui? hahah.</p>
 <div align = "center">
-<img src =" https://user-images.githubusercontent.com/79184789/131442139-bd9769b7-0193-45a0-8788-1372ccb729ad.gif">
+<img src = "https://user-images.githubusercontent.com/79184789/131442139-bd9769b7-0193-45a0-8788-1372ccb729ad.gif">
 </div>
 <br>
 <p> Brincadeiras a parte, esta é uma breve descrição deste projeto.<br>
