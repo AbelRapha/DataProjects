@@ -2,8 +2,6 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-# modelo = joblib.load('modelo.joblib')
-
         
 x_numericos = {'latitude': 0, 'longitude': 0, 'accommodates': 0, 'bathrooms': 0, 'bedrooms': 0, 'beds': 0, 'extra_people': 0,
                'minimum_nights': 0, 'ano': 0, 'mes': 0, 'n_amenities': 0, 'host_listings_count': 0}
