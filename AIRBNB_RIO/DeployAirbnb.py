@@ -19,11 +19,15 @@ for item in x_listas:
     for valor in x_listas[item]:
         dicionario[f'{item}_{valor}'] = 0
 
+st.title("""Projeto de Previsão de valor da diária no Airbnb no Rio de Janeiro
+        """)
+st.text("""Defina os parâmetros e preveja o valor da diária do seu imóvel""")
 
 for item in x_numericos:
     if item == 'latitude' or item == 'longitude':
         valor = st.number_input(f'{item}', step=0.00001, value=0.0, format="%.5f")
     elif item == 'extra_people':
+        st.write(""" __Custo por pessoa extra__ """)
         valor = st.number_input(f'{item}', step=0.01, value=0.0)
     else:
         valor = st.number_input(f'{item}', step=1, value=0)
@@ -42,11 +46,13 @@ for item in x_listas:
     dicionario[f'{item}_{valor}'] = 1
     
 botao = st.button('Prever Valor do Imóvel')
-
 if botao:
     dicionario.update(x_numericos)
     dicionario.update(x_tf)
     valores_x = pd.DataFrame(dicionario, index=[0])
     modelo = joblib.load('modelo.joblib')
     preco = modelo.predict(valores_x)
-    st.write(preco[0])
+    if preco[0]:
+        st.error(f"O valor a ser cobrado é de R$ {preco[0]:.2f}")
+        st.button('Reiniciar Parâmetros')
+    
