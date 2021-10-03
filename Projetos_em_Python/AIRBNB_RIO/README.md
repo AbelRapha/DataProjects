@@ -22,7 +22,7 @@ As bases de dados foram retiradas do site kaggle: https://www.kaggle.com/allanbr
 
 Elas estão disponíveis para download neste repositório (se você puxar os dados direto do Kaggle pode ser que encontre resultados diferentes dos meus, afinal as bases de dados podem ter sido atualizadas).
 
-Caso queira uma outra solução, podemos olhar como referência a solução do usuário Allan Bruno do kaggle no Notebook: https://www.kaggle.com/allanbruno/helping-regular-people-price-listings-on-airbnb
+Caso queira uma outra solução, tive como referência a solução do usuário Allan Bruno do kaggle no Notebook: https://www.kaggle.com/allanbruno/helping-regular-people-price-listings-on-airbnb
 
 Você vai perceber semelhanças entre a solução que vamos desenvolver aqui e a dele, mas também algumas diferenças significativas no processo de construção do projeto.
 
@@ -37,3 +37,29 @@ Você vai perceber semelhanças entre a solução que vamos desenvolver aqui e a
 - Adicionais/Comodidades podem ter um impacto significativo, visto que temos muitos prédios e casas antigos no Rio de Janeiro
 
 Vamos descobrir o quanto esses fatores impactam e se temos outros fatores não tão intuitivos que são extremamente importantes.
+
+## *Deploy do projeto*
+- Clone este repositório
+- baixe o link do arquivo em formato joblib [aqui](https://drive.google.com/file/d/1Ph-G8HFrYwHXXWhmAuih3q_xt6h4QK1Y/view?usp=sharing), e em seguida extraia o arquivo e coloque na mesma pasta do arquivo de deploy
+- Abra a pasta em um editor de código como o VS Code
+- Abra um terminal
+- Certifique-se que esteja na pasta correta do arquivo em questão
+- Comando para rodar a aplicação 
+  ```
+  streamlit run DeployAirbnb.py
+  ```
+## informações solicitadas para realizar a previsão da diária:
+
+- Latitude e Longitude (Coordenadas precisas, pegar pelo google maps, por exemplo)
+- Quantidade de Comodos, banheiros, quartos, camas.
+- Custo extra por pessoa
+- Quantidade mínima de noites para se hospedar
+- Ano a ser previsto
+- Mês a ser previsto
+- Quantidade de itens na casa
+- Se o Locador costuma responder ou não (0 para Sim, 1 para Não)
+- Se o Locador é Superhost na plataforma do Airbnb
+- Se o imóvel está disponível para ser alugado a qualquer momento ou não
+- Tipo de imóvel
+- Tipo de quarto
+- Qual a política de cancelamento do contrato de locação 
