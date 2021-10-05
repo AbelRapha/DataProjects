@@ -1,4 +1,4 @@
-# Projeto Airbnb Rio - Ferramento de Previsão de Preço de Imóvel para pessoas comuns
+# Projeto Airbnb Rio - Ferramenta de Previsão de Preço de Imóvel para pessoas comuns
 <br>
 
 ## *Contexto* 
